@@ -19,9 +19,7 @@ def shorten(request, url):
         reverse('redirect', args=[shortened_url_hash])
     )
 
-    return HttpResponse(
-        f'Shortened URL: <a href="{shortened_url}">{shortened_url}</a>'
-    )
+    return render(request, 'main/link.html', {'shortened_url': shortened_url})
 
 
 def redirect_hash(request, url_hash):
