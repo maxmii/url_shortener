@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>URL Link</title>
+  {% load bootstrap5 %} {% bootstrap_css %} {% bootstrap_javascript %}
+</head>
+
+<body class="mdc-typography">
+  <div id="position-relative">
+    <div class="position-absolute top-50 start-50 translate-middle">
+      {% block content %}
+
+      {% endblock %}
+    </div>
+  </div>
+</body>
